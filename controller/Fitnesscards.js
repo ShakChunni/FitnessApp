@@ -7,7 +7,7 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-import fitness from "../model/fitness";
+import fitness from "../model/dataStored";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 

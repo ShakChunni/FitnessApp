@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import React from "react";
-import Fitnesscards from "../controller/Fitnesscards";
+import Fitnesscards from "../controller/FitnessCards";
 
 const Homescreen = () => {
   return (
