@@ -15,8 +15,12 @@ const FitScreen = () => {
       <Text style={styles.excersiseSetStyle}>x{current.sets}</Text>
 
       <Pressable style={styles.bottomPressableStyle}>
-        <Text style={styles.bottomPressableTextStyle}>Done</Text>
+        <Text style={styles.bottomPressableTextStyle}>FINISHED</Text>
       </Pressable>
+      <Pressable style={styles.bottomSidePressableStyle}>
+      <Text style={styles.bottomSidePressableTextStyle}>PREVIOUS</Text>
+      </Pressable>
+      <Pressable></Pressable>
     </View>
   );
 };
@@ -29,7 +33,7 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     width: "100%",
-    height: 450,
+    height: 550,
   },
   excersiseNameStyle: {
     marginTop: 15,
@@ -39,25 +43,38 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   excersiseSetStyle: {
-    marginTop: 10,
+    marginTop: 5,
     color: "purple",
     fontSize: 26,
     fontWeight: "bold",
     textAlign: "center",
+    marginBottom: 12,
   },
   bottomPressableStyle: {
     backgroundColor: "purple",
-    padding: 10,
+    padding: 12,
     marginLeft: "auto",
     marginRight: "auto",
     marginVertical: 20,
-    width: 180,
-    borderRadius: 10,
+    width: 150,
+    borderRadius: 12,
   },
   bottomPressableTextStyle: {
     color: "white",
     textAlign: "center",
-    fontSize: 16,
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  bottomSidePressableStyle: {
+    backgroundColor: "purple",
+    padding: 12,
+    width: 90,
+    borderRadius: 12,
+  },
+  bottomSidePressableTextStyle: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 12,
     fontWeight: "bold",
   },
 });

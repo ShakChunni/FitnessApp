@@ -55,7 +55,7 @@ const WorkoutScreen = () => {
       }
        style={styles.bottomPressableStyle}>
         
-        <Text style={styles.bottomPressableTextStyle}>Start</Text>
+        <Text style={styles.bottomPressableTextStyle}>START</Text>
       </Pressable>
     </>
   );
