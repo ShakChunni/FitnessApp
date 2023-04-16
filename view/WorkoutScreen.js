@@ -16,34 +16,43 @@ const WorkoutScreen = () => {
   const route = useRoute();
   const navigation = useNavigation();
   return (
-    <ScrollView style={styles.firstContainer}>
-      <Image
-        style={styles.topImageContainer}
-        source={{ uri: route.params.image }}
-      />
-      <Ionicons
-        onPress={() => navigation.goBack()}
-        style={styles.backButtonstyle}
-        name="arrow-back"
-        size={28}
-        color="black"
-      />
+    <>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.firstContainer}
+      >
+        <Image
+          style={styles.topImageContainer}
+          source={{ uri: route.params.image }}
+        />
+        <Ionicons
+          onPress={() => navigation.goBack()}
+          style={styles.backButtonstyle}
+          name="arrow-back"
+          size={28}
+          color="black"
+        />
 
-      {route.params.excersises.map((item, key) => (
-        <Pressable style={styles.pressableStyle}>
-          <Image style={styles.imageContainer} source={{ uri: item.image }} />
+        {route.params.excersises.map((item, index) => (
+          <Pressable style={styles.pressableStyle}>
+            <Image style={styles.imageContainer} source={{ uri: item.image }} />
 
-          <View style={styles.textViewStyle}>
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-              {item.name}
-            </Text>
-            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-              {item.sets}
-            </Text>
-          </View>
-        </Pressable>
-      ))}
-    </ScrollView>
+            <View style={styles.textViewStyle}>
+              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+                {item.name}
+              </Text>
+              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                {item.sets}
+              </Text>
+            </View>
+          </Pressable>
+        ))}
+      </ScrollView>
+
+      <Pressable style={styles.bottomPressableStyle}>
+        <Text style={styles.bottomPressableTextStyle}>Start</Text>
+      </Pressable>
+    </>
   );
 };
 
@@ -75,5 +84,20 @@ const styles = StyleSheet.create({
   },
   textViewStyle: {
     marginLeft: 100,
+  },
+  bottomPressableStyle: {
+    backgroundColor: "purple",
+    padding: 10,
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginVertical: 20,
+    width: 180,
+    borderRadius: 10,
+  },
+  bottomPressableTextStyle: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
