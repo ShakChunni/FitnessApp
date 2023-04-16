@@ -4,7 +4,10 @@ import Fitnesscards from "../controller/FitnessCards";
 
 const Homescreen = () => {
   return (
-    <ScrollView style={styles.firstContainer}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      style={styles.firstContainer}
+    >
       <View>
         <View style={styles.heading}>
           <Text style={{ color: "#281C2D", fontWeight: "bold", fontSize: 25 }}>
@@ -41,7 +44,9 @@ const Homescreen = () => {
           </View>
         </View>
       </View>
-      <View style={styles.fitnessCardStyle}><Fitnesscards /></View>
+      <View style={styles.fitnessCardStyle}>
+        <Fitnesscards />
+      </View>
     </ScrollView>
   );
 };
@@ -52,11 +57,11 @@ const styles = StyleSheet.create({
   firstContainer: {
     marginTop: 50,
   },
-  fitnessCardStyle:{
+  fitnessCardStyle: {
     marginLeft: 10,
     marginRight: 10,
     paddingTop: 75,
-  } ,
+  },
   heading: {
     backgroundColor: "#A020F0",
     padding: 10,

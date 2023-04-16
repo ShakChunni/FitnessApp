@@ -49,7 +49,12 @@ const WorkoutScreen = () => {
         ))}
       </ScrollView>
 
-      <Pressable style={styles.bottomPressableStyle}>
+      <Pressable onPress={() => navigation.navigate("Fit", {
+        excersises: route.params.excersises,
+      })
+      }
+       style={styles.bottomPressableStyle}>
+        
         <Text style={styles.bottomPressableTextStyle}>Start</Text>
       </Pressable>
     </>
