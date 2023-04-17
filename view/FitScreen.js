@@ -17,10 +17,6 @@ const FitScreen = () => {
       <Pressable style={styles.bottomPressableStyle}>
         <Text style={styles.bottomPressableTextStyle}>FINISHED</Text>
       </Pressable>
-      <Pressable style={styles.bottomSidePressableStyle}>
-      <Text style={styles.bottomSidePressableTextStyle}>PREVIOUS</Text>
-      </Pressable>
-      <Pressable></Pressable>
     </View>
   );
 };
