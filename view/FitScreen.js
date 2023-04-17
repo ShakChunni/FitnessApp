@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React, { useState } from "react";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 const FitScreen = () => {
   const route = useRoute();
   console.log(route.params);
+  const navigation = useNavigation();
   const [index, setIndex] = useState(0);
   const excersises = route.params.excersises;
   const current = excersises[index];
@@ -14,7 +15,9 @@ const FitScreen = () => {
       <Text style={styles.excersiseNameStyle}>{current.name}</Text>
       <Text style={styles.excersiseSetStyle}>x{current.sets}</Text>
 
-      <Pressable style={styles.bottomPressableStyle}>
+      <Pressable
+      onPress={() => navigation.navigate("Rest") }
+      style={styles.bottomPressableStyle}>
         <Text style={styles.bottomPressableTextStyle}>FINISHED</Text>
       </Pressable>
     </View>
