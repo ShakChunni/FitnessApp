@@ -16,8 +16,14 @@ const FitScreen = () => {
       <Text style={styles.excersiseSetStyle}>x{current.sets}</Text>
 
       <Pressable
-      onPress={() => navigation.navigate("Rest") }
-      style={styles.bottomPressableStyle}>
+        onPress={() => {
+          navigation.navigate("Rest");
+          setTimeout(() => {
+            setIndex(index + 1);
+          }, 2000);
+        }}
+        style={styles.bottomPressableStyle}
+      >
         <Text style={styles.bottomPressableTextStyle}>FINISHED</Text>
       </Pressable>
     </View>

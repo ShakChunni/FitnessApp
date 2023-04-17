@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useNavigation } from "@react-navigation/native";
 const RestScreen = () => {
     const navigation = useNavigation();
@@ -9,9 +9,15 @@ const RestScreen = () => {
         setTimeout(() => {
             if(timeLeft <= 0) {
                 navigation.goBack();
+                clearTimeout(timer);
             }
+            setTimeLeft(timeLeft - 1);
         }, 1000)
     }
+    useEffect(() => {
+        startTime();
+        return () => clearTimeout(timer);
+    })
   return (
     <View style={styles.firstContainer}>
       <Image
@@ -22,6 +28,9 @@ const RestScreen = () => {
         style={styles.restImageStyle}
       />
       <Text style={styles.textStyle}>TAKE A REST!</Text>
+    
+        <Text style={styles.textStyle}>{timeLeft}</Text>
+    
     </View>
   );
 };
