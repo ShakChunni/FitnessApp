@@ -26,6 +26,15 @@ const FitScreen = () => {
       >
         <Text style={styles.bottomPressableTextStyle}>FINISHED</Text>
       </Pressable>
+
+      <Pressable style={styles.prevNextContainer}>
+        <Pressable style={styles.prevNextContainerStyle}>
+          <Text style={styles.prevNextContainerTextStyle}>PREV</Text>
+        </Pressable>
+        <Pressable style={styles.prevNextContainerStyle}>
+          <Text style={styles.prevNextContainerTextStyle}>NEXT</Text>
+        </Pressable>
+      </Pressable>
     </View>
   );
 };
@@ -42,21 +51,21 @@ const styles = StyleSheet.create({
   },
   excersiseNameStyle: {
     marginTop: 15,
-    color: "purple",
+    color: "#FD49A0",
     fontSize: 32,
     fontWeight: "bold",
     textAlign: "center",
   },
   excersiseSetStyle: {
     marginTop: 5,
-    color: "purple",
+    color: "#FD49A0",
     fontSize: 26,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 12,
   },
   bottomPressableStyle: {
-    backgroundColor: "purple",
+    backgroundColor: "#FD49A0",
     padding: 12,
     marginLeft: "auto",
     marginRight: "auto",
@@ -65,21 +74,31 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   bottomPressableTextStyle: {
-    color: "white",
+    color: "#B4FEE7",
     textAlign: "center",
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "bold",
   },
-  bottomSidePressableStyle: {
-    backgroundColor: "purple",
-    padding: 12,
-    width: 90,
-    borderRadius: 12,
+
+  prevNextContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: 20,
   },
-  bottomSidePressableTextStyle: {
-    color: "white",
+
+  prevNextContainerStyle: {
+    marginHorizontal: 25,
+    backgroundColor: "#FD49A0",
+    padding: 6,
+    borderRadius: 12,
+    width: 80,
+  },
+  prevNextContainerTextStyle: {
+    color: "#B4FEE7",
     textAlign: "center",
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: "bold",
   },
 });

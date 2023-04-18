@@ -49,12 +49,14 @@ const WorkoutScreen = () => {
         ))}
       </ScrollView>
 
-      <Pressable onPress={() => navigation.navigate("Fit", {
-        excersises: route.params.excersises,
-      })
-      }
-       style={styles.bottomPressableStyle}>
-        
+      <Pressable
+        onPress={() =>
+          navigation.navigate("Fit", {
+            excersises: route.params.excersises,
+          })
+        }
+        style={styles.bottomPressableStyle}
+      >
         <Text style={styles.bottomPressableTextStyle}>START</Text>
       </Pressable>
     </>
@@ -76,7 +78,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 15,
     left: 20,
-    color: "#FFFFFF",
+    color: "#B4FEE7",
   },
   imageContainer: {
     width: 90,
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
     marginLeft: 100,
   },
   bottomPressableStyle: {
-    backgroundColor: "purple",
+    backgroundColor: "#FD49A0",
     padding: 10,
     marginLeft: "auto",
     marginRight: "auto",
@@ -100,7 +102,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   bottomPressableTextStyle: {
-    color: "white",
+    color: "#B4FEE7",
     textAlign: "center",
     fontSize: 16,
     fontWeight: "bold",

@@ -10,8 +10,15 @@ const Homescreen = () => {
     >
       <View>
         <View style={styles.heading}>
-          <Text style={{ color: "#281C2D", fontWeight: "bold", fontSize: 25 }}>
-            Home Workout
+          <Text
+            style={{
+              color: "#B4FEE7",
+              fontStyle: "italic",
+              fontWeight: "bold",
+              fontSize: 30,
+            }}
+          >
+            PowerFitness
           </Text>
           <View style={styles.firstContainerTexts}>
             <View>
@@ -38,7 +45,7 @@ const Homescreen = () => {
                 borderRadius: 7,
               }}
               source={{
-                uri: "https://img.freepik.com/free-photo/abs-beautiful-young-female-athlete-practicing-studio-monochrome-purple-portrait_155003-40836.jpg?w=1380&t=st=1680815341~exp=1680815941~hmac=309f6b14ee26fbb92af857164060b5c571c0768860201e3e8da61255420118e1",
+                uri: "https://img.freepik.com/free-photo/beautiful-young-female-athlete-practicing-pink-studio-wall-monochrome-portrait_155003-34085.jpg?w=1380&t=st=1681812571~exp=1681813171~hmac=5683ca0752fb8a2a8e034782d1e2a6a9ab4449ee4a5bc3b40e3fff910c3514ec",
               }}
             />
           </View>
@@ -63,7 +70,7 @@ const styles = StyleSheet.create({
     paddingTop: 75,
   },
   heading: {
-    backgroundColor: "#A020F0",
+    backgroundColor: "#FD49A0",
     padding: 10,
     height: 200,
     width: "100%",
@@ -77,11 +84,11 @@ const styles = StyleSheet.create({
   insideText1: {
     textAlign: "center",
     fontWeight: "bold",
-    color: "#281C2D",
+    color: "#B4FEE7",
     fontSize: 18,
   },
   insideText2: {
-    color: "#BEAFC2",
+    color: "#B4FEE7",
     fontSize: 20,
     fontWeight: "bold",
     marginTop: 6,
