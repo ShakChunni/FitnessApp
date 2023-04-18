@@ -39,9 +39,28 @@ const FitScreen = () => {
       )}
 
       <Pressable style={styles.prevNextContainer}>
-        <Pressable style={styles.prevNextContainerStyle}>
-          <Text style={styles.prevNextContainerTextStyle}>PREV</Text>
-        </Pressable>
+        {index === 0 ? (
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+            style={styles.prevNextContainerStyle}
+          >
+            <Text style={styles.prevNextContainerTextStyle}>PREV</Text>
+          </Pressable>
+        ) : (
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Rest");
+              setTimeout(() => {
+                setIndex(index - 1);
+              }, 2000);
+            }}
+            style={styles.prevNextContainerStyle}
+          >
+            <Text style={styles.prevNextContainerTextStyle}>PREV</Text>
+          </Pressable>
+        )}
 
         {index + 1 >= excersises.length ? (
           <Pressable
