@@ -10,7 +10,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import fitness from "../model/dataStored";
+import fitness from "../model/DataStored";
 
 const WorkoutScreen = () => {
   const route = useRoute();

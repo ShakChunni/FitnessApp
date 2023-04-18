@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 const RestScreen = () => {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     height: 450,
   },
   textStyle: {
-    fontSize: 20,
+    fontSize: 28,
     fontWeight: "bold",
     marginTop: 20,
     textAlign: "center",
