@@ -1,14 +1,24 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useRoute, useNavigation } from "@react-navigation/native";
+import { FitnessItems } from "../model/Context";
 const FitScreen = () => {
+  const {
+    completed,
+    setCompleted,
+    minutes,
+    setMinutes,
+    calories,
+    setCalories,
+    setWorkout,
+    workout,
+  } = useContext(FitnessItems);
   const route = useRoute();
-  console.log(route.params);
   const navigation = useNavigation();
   const [index, setIndex] = useState(0);
   const excersises = route.params.excersises;
   const current = excersises[index];
-  console.log(current, "first exercise");
+
   return (
     <View style={styles.firstContainer}>
       <Image style={styles.imageStyle} source={{ uri: current.image }} />
