@@ -1,8 +1,18 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
-import React from "react";
+import React, {useState, useContext} from "react";
 import Fitnesscards from "../controller/FitnessCards";
-
+import { FitnessItems } from "../model/States";
 const Homescreen = () => {
+  const {
+    completed,
+    setCompleted,
+    minutes,
+    setMinutes,
+    calories,
+    setCalories,
+    setWorkout,
+    workout,
+  } = useContext(FitnessItems);
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}

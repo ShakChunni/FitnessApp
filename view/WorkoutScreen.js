@@ -47,18 +47,19 @@ const WorkoutScreen = () => {
               </Text>
             </View>
             {completed.includes(item.name) ? (
-              <AntDesign name="checkcircle" size={18} color={"#FD49A0"} />
+              <AntDesign name="checkcircle" size={22} color={"#FD49A0"} />
             ) : null}
           </Pressable>
         ))}
       </ScrollView>
 
       <Pressable
-        onPress={() =>
+        onPress={() => {
           navigation.navigate("Fit", {
             excersises: route.params.excersises,
-          })
-        }
+          });
+          setCompleted([]);
+        }}
         style={styles.bottomPressableStyle}
       >
         <Text style={styles.bottomPressableTextStyle}>START</Text>
