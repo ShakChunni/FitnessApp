@@ -4,7 +4,7 @@ import FitnessCards from '../components/FitnessCards'
 import HomeScreen from './HomeScreen'
 import RestScreen from './RestScreen'
 
-const test = () => {
+const Test = () => {
   return (
     <View>
       <Text>test</Text>
@@ -12,6 +12,6 @@ const test = () => {
   )
 }
 
-export default test
+export default Test
 
 const styles = StyleSheet.create({})
