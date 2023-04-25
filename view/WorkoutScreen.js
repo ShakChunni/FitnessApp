@@ -6,13 +6,18 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-import React from "react";
+import React, { useState, useContext } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import fitness from "../model/DataStored";
+import { FitnessItems } from "../model/Context";
+import { AntDesign } from '@expo/vector-icons';
 
 const WorkoutScreen = () => {
+  const {
+    completed,
+    setCompleted,
+  } = useContext(FitnessItems);
   const route = useRoute();
   const navigation = useNavigation();
   return (
@@ -45,6 +50,13 @@ const WorkoutScreen = () => {
                 {item.sets}
               </Text>
             </View>
+
+            {completed.includes(item.name) ? (
+
+            )    
+            : (
+              null
+            )}
           </Pressable>
         ))}
       </ScrollView>

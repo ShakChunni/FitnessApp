@@ -53,6 +53,10 @@ const FitScreen = () => {
           <Pressable
             onPress={() => {
               navigation.navigate("Home");
+              setCompleted([...completed, current.name]);
+              setWorkout(workout + 1);
+              setMinutes(minutes + 2);
+              setCalories(calories + 15);
             }}
             style={styles.prevNextContainerStyle}
           >
