@@ -24,3 +24,10 @@ View: Represents the user interface of the application. In PowerFitness, the Vie
 Controller: Handles the interaction between the Model and the View. In PowerFitness, the Controller includes the logic for handling user input, retrieving data from the Model, and updating the View.
 
 By separating these components, the MVC architecture makes it easier to maintain and modify an application over time.
+
+## Installation
+1. Clone the repository: git clone https://github.com/your-username/FitnessApp.git
+2. Navigate to the project directory: cd FitnessApp
+3. Install dependencies: npm install
+4. Run the app: npm start
+Note: You will need to have Node.js and the Expo CLI installed on your machine to run the project.
