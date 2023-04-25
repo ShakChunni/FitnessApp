@@ -11,13 +11,10 @@ import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { FitnessItems } from "../model/Context";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign } from "@expo/vector-icons";
 
 const WorkoutScreen = () => {
-  const {
-    completed,
-    setCompleted,
-  } = useContext(FitnessItems);
+  const { completed, setCompleted } = useContext(FitnessItems);
   const route = useRoute();
   const navigation = useNavigation();
   return (
@@ -50,13 +47,9 @@ const WorkoutScreen = () => {
                 {item.sets}
               </Text>
             </View>
-
             {completed.includes(item.name) ? (
-
-            )    
-            : (
-              null
-            )}
+              <AntDesign name="checkcircle" size={24} color="black" />
+            ) : null}
           </Pressable>
         ))}
       </ScrollView>
