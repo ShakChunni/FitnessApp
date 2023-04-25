@@ -15,7 +15,7 @@ const Homescreen = () => {
             style={{
               color: "#B4FEE7",
               fontStyle: "italic",
-              fontWeight: "bold",
+              fontWeight: "900",
               fontSize: 30,
             }}
           >
