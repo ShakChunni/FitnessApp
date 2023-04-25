@@ -1,18 +1,9 @@
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
-import React, {useState, useContext} from "react";
+import React, { useContext } from "react";
 import Fitnesscards from "../controller/FitnessCards";
 import { FitnessItems } from "../model/States";
 const Homescreen = () => {
-  const {
-    completed,
-    setCompleted,
-    minutes,
-    setMinutes,
-    calories,
-    setCalories,
-    setWorkout,
-    workout,
-  } = useContext(FitnessItems);
+  const { minutes, calories, workout } = useContext(FitnessItems);
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -32,17 +23,17 @@ const Homescreen = () => {
           </Text>
           <View style={styles.firstContainerTexts}>
             <View>
-              <Text style={styles.insideText1}>0</Text>
+              <Text style={styles.insideText1}>{workout}</Text>   
               <Text style={styles.insideText2}>WORKOUTS</Text>
             </View>
 
             <View>
-              <Text style={styles.insideText1}>0</Text>
+              <Text style={styles.insideText1}>{calories}</Text>
               <Text style={styles.insideText2}>KCAL</Text>
             </View>
 
             <View>
-              <Text style={styles.insideText1}>0</Text>
+              <Text style={styles.insideText1}>{minutes}</Text>
               <Text style={styles.insideText2}>MINS</Text>
             </View>
           </View>
