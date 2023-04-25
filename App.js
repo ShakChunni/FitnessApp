@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import StackNavigator from "./controller/StackNavigator";
-import { FitnessContext } from "./model/Context";
-FitnessContext;
+import { States } from "./model/States";
+States;
 export default function App() {
   return (
-    <FitnessContext>
+    <States>
       <StackNavigator />
-    </FitnessContext>
+    </States>
   );
 }
 

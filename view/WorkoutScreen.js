@@ -10,7 +10,7 @@ import React, { useState, useContext } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import { FitnessItems } from "../model/Context";
+import { FitnessItems } from "../model/States";
 import { AntDesign } from "@expo/vector-icons";
 
 const WorkoutScreen = () => {
@@ -48,7 +48,7 @@ const WorkoutScreen = () => {
               </Text>
             </View>
             {completed.includes(item.name) ? (
-              <AntDesign name="checkcircle" size={24} color="black" />
+              <AntDesign name="checkcircle" size={24} color="green" />
             ) : null}
           </Pressable>
         ))}

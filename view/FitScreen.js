@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React, { useState, useContext } from "react";
 import { useRoute, useNavigation } from "@react-navigation/native";
-import { FitnessItems } from "../model/Context";
+import { FitnessItems } from "../model/States";
 const FitScreen = () => {
   const {
     completed,
@@ -13,6 +13,7 @@ const FitScreen = () => {
     setWorkout,
     workout,
   } = useContext(FitnessItems);
+  //console.log(completed, "completed");                //Unit test to see if the completed workout is being logged
   const route = useRoute();
   const navigation = useNavigation();
   const [index, setIndex] = useState(0);
@@ -38,6 +39,10 @@ const FitScreen = () => {
         <Pressable
           onPress={() => {
             navigation.navigate("Rest");
+            setCompleted([...completed, current.name]);
+            setWorkout(workout + 1);
+            setMinutes(minutes + 5);
+            setCalories(calories + 18);
             setTimeout(() => {
               setIndex(index + 1);
             }, 2000);
@@ -53,10 +58,6 @@ const FitScreen = () => {
           <Pressable
             onPress={() => {
               navigation.navigate("Home");
-              setCompleted([...completed, current.name]);
-              setWorkout(workout + 1);
-              setMinutes(minutes + 2);
-              setCalories(calories + 15);
             }}
             style={styles.prevNextContainerStyle}
           >
@@ -88,6 +89,7 @@ const FitScreen = () => {
         ) : (
           <Pressable
             onPress={() => {
+              //console.log("skip");                  //Unit test to see if the skip button is working
               navigation.navigate("Rest");
               setTimeout(() => {
                 setIndex(index + 1);

@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 const FitnessItems = createContext();
 
-const FitnessContext = ({ children }) => {
+const States = ({ children }) => {
   const [completed, setCompleted] = useState([]);
   const [workout, setWorkout] = useState(0);
   const [calories, setCalories] = useState(0);
@@ -25,4 +25,4 @@ const FitnessContext = ({ children }) => {
   );
 };
 
-export { FitnessContext, FitnessItems };
+export { States, FitnessItems };
