@@ -109,7 +109,7 @@ export default FitScreen;
 
 const styles = StyleSheet.create({
   firstContainer: {
-    marginTop: 40,
+    marginTop: 35,
   },
   imageStyle: {
     width: "100%",

@@ -36,11 +36,11 @@ export default RestScreen;
 
 const styles = StyleSheet.create({
   firstContainer: {
-    marginTop: 40,
+    marginTop: 33,
   },
   restImageStyle: {
     width: "100%",
-    height: 450,
+    height: 600,
   },
   textStyle: {
     fontSize: 28,

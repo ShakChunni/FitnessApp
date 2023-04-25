@@ -62,7 +62,7 @@ export default Homescreen;
 
 const styles = StyleSheet.create({
   firstContainer: {
-    marginTop: 50,
+    marginTop: 35,
   },
   fitnessCardStyle: {
     marginLeft: 10,

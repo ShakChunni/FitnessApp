@@ -32,7 +32,6 @@ const WorkoutScreen = () => {
           style={styles.backButtonstyle}
           name="arrow-back"
           size={28}
-          color="black"
         />
 
         {route.params.excersises.map((item, index) => (
@@ -40,15 +39,15 @@ const WorkoutScreen = () => {
             <Image style={styles.imageContainer} source={{ uri: item.image }} />
 
             <View style={styles.textViewStyle}>
-              <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+              <Text style={{ fontSize: 20, fontWeight: "900" }}>
                 {item.name}
               </Text>
-              <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+              <Text style={{ fontSize: 16, fontWeight: "500" }}>
                 {item.sets}
               </Text>
             </View>
             {completed.includes(item.name) ? (
-              <AntDesign name="checkcircle" size={24} color="green" />
+              <AntDesign name="checkcircle" size={18} color={"#FD49A0"} />
             ) : null}
           </Pressable>
         ))}
@@ -72,7 +71,7 @@ export default WorkoutScreen;
 
 const styles = StyleSheet.create({
   firstContainer: {
-    marginTop: 50,
+    marginTop: 35,
     backgroundColor: "#FFFFFF",
   },
   topImageContainer: {
@@ -96,6 +95,7 @@ const styles = StyleSheet.create({
   },
   textViewStyle: {
     marginLeft: 100,
+    width: 170,
   },
   bottomPressableStyle: {
     backgroundColor: "#FD49A0",
