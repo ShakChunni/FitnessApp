@@ -1,6 +1,6 @@
 # FitnessApp
 
-### Project Description
+## Project Description
 
 This is a fitness app called "PowerFitness". PowerFitness is a mobile fitness application built with React Native, following the Model-View-Controller (MVC) architecture. The app allows users to track their workouts and fitness progress, set goals, and access workout plans.
 
