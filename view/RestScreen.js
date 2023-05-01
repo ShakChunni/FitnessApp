@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 const RestScreen = () => {
   const navigation = useNavigation();
   let timer = 0;
-  const [timeLeft, setTimeLeft] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(5);
   const startTime = () => {
     setTimeout(() => {
       if (timeLeft <= 0) {
