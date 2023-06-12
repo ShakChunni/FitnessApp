@@ -1,6 +1,6 @@
 {
-  "name": "fitnessapp",
-  "version": "1.0.0",
+  "name": "powerfitness",
+  "version": "1.0.1",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -10,12 +10,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/cli": "^11.3.2",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "expo": "~48.0.10",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.6",
+    "react-native": "0.71.10",
+    "react-native-eject": "^0.2.0",
     "react-native-safe-area-context": "^4.5.0",
     "react-native-screens": "^3.20.0"
   },
