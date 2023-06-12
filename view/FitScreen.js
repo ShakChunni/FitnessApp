@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React, { useState, useContext } from "react";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { FitnessItems } from "../model/States";
+import { StatusBar } from "expo-status-bar";
 const FitScreen = () => {
   const {
     completed,
@@ -21,7 +22,8 @@ const FitScreen = () => {
   const current = excersises[index];
 
   return (
-    <View style={styles.firstContainer}>
+    <View>
+      <StatusBar style="auto" translucent={false} backgroundColor="#FFFFFF" />
       <Image style={styles.imageStyle} source={{ uri: current.image }} />
       <Text style={styles.excersiseNameStyle}>{current.name}</Text>
       <Text style={styles.excersiseSetStyle}>x{current.sets}</Text>
@@ -41,8 +43,8 @@ const FitScreen = () => {
             navigation.navigate("Rest");
             setCompleted([...completed, current.name]);
             setWorkout(workout + 1);
-            setMinutes(minutes + 5);                                //Setting the minutes and calories for the workout(hardcoded)
-            setCalories(calories + 18);                         
+            setMinutes(minutes + 5); //Setting the minutes and calories for the workout(hardcoded)
+            setCalories(calories + 18);
             setTimeout(() => {
               setIndex(index + 1);
             }, 2000);
@@ -108,9 +110,6 @@ const FitScreen = () => {
 export default FitScreen;
 
 const styles = StyleSheet.create({
-  firstContainer: {
-    marginTop: 35,
-  },
   imageStyle: {
     width: "100%",
     height: 550,
@@ -135,7 +134,7 @@ const styles = StyleSheet.create({
     padding: 12,
     marginLeft: "auto",
     marginRight: "auto",
-    marginVertical: 20,
+    marginVertical: 10,
     width: 150,
     borderRadius: 12,
   },
@@ -151,15 +150,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 20,
+    marginTop: 5,
   },
 
   prevNextContainerStyle: {
-    marginHorizontal: 25,
+    marginHorizontal: 50,
     backgroundColor: "#FD49A0",
     padding: 6,
     borderRadius: 12,
-    width: 80,
+    width: 100,
   },
   prevNextContainerTextStyle: {
     color: "#B4FEE7",

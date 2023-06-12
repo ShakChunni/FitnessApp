@@ -12,6 +12,7 @@ import { useRoute } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import { FitnessItems } from "../model/States";
 import { AntDesign } from "@expo/vector-icons";
+import { StatusBar } from "expo-status-bar";
 
 const WorkoutScreen = () => {
   const { completed, setCompleted } = useContext(FitnessItems);
@@ -19,10 +20,8 @@ const WorkoutScreen = () => {
   const navigation = useNavigation();
   return (
     <>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        style={styles.firstContainer}
-      >
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <StatusBar style="auto" translucent={false} backgroundColor="#FFFFFF" />
         <Image
           style={styles.topImageContainer}
           source={{ uri: route.params.image }}
@@ -71,10 +70,6 @@ const WorkoutScreen = () => {
 export default WorkoutScreen;
 
 const styles = StyleSheet.create({
-  firstContainer: {
-    marginTop: 35,
-    backgroundColor: "#FFFFFF",
-  },
   topImageContainer: {
     width: "100%",
     height: 170,

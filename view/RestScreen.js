@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
 const RestScreen = () => {
   const navigation = useNavigation();
   let timer = 0;
@@ -19,11 +20,10 @@ const RestScreen = () => {
     return () => clearTimeout(timer);
   });
   return (
-    <View style={styles.firstContainer}>
+    <View>
+      <StatusBar style="auto" translucent={false} backgroundColor="#FFFFFF" />
       <Image
-        source={{
-          uri: "https://img.freepik.com/free-photo/relax-after-exercise_1150-13244.jpg?w=740&t=st=1681813233~exp=1681813833~hmac=870c3639a0f420006b6dada7a6cfa0e754b130d8efba957f467b314138e1e2b2",
-        }}
+        source={require("../assets/images/relax-after-exercise_1150-13244.jpg")}
         style={styles.restImageStyle}
       />
       <Text style={styles.textStyle}>TAKE A REST!</Text>
@@ -35,9 +35,6 @@ const RestScreen = () => {
 export default RestScreen;
 
 const styles = StyleSheet.create({
-  firstContainer: {
-    marginTop: 33,
-  },
   restImageStyle: {
     width: "100%",
     height: 600,
