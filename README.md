@@ -31,8 +31,4 @@ By separating these components, the MVC architecture makes it easier to maintain
 
 ### Installation
 
-1. Clone the repository: git clone https://github.com/your-username/FitnessApp.git
-2. Navigate to the project directory: cd FitnessApp
-3. Install dependencies: npm install
-4. Run the app: npm start
-   Note: You will need to have Node.js and the Expo CLI installed on your machine to run the project.
+Just download the apk (PowerFitness.apk) and install 😁
