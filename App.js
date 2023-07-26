@@ -9,7 +9,7 @@ export default function App() {
       <StackNavigator />
     </States>
   );
-}
+} //sdasdasd
 
 const styles = StyleSheet.create({
   container: {
