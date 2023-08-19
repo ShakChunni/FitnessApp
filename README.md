@@ -31,4 +31,4 @@ By separating these components, the MVC architecture makes it easier to maintain
 
 ### Installation
 
-Just download the apk (PowerFitness.apk) and install 😁
+Just download the apk (PowerFitness.apk) and install 😁 [https://drive.google.com/file/d/1ojlDxcwtBkUs0K9XzdLL_n_GjCMYtLPh/view?usp=sharing]
